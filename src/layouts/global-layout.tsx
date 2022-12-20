@@ -1,16 +1,14 @@
 import { ReactNode } from "react";
+import { Outlet } from "react-router-dom";
 import PrimaryNavigation from "../components/primary-navigation/primary-navigation";
 
-interface GlobalLayoutProps {
-    children: ReactNode;
-}
 
-function Globallayout({ children }: GlobalLayoutProps) {
+function Globallayout() {
 
     return (
         <>
             <PrimaryNavigation />
-            {children}
+            <Outlet />
         </>
     );
 }

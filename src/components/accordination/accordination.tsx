@@ -1,5 +1,6 @@
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
 import MuiAccordionSummary, {
   AccordionSummaryProps,
@@ -53,8 +54,8 @@ export default function CustomizedAccordions() {
     };
 
   return (
-    <div>
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+    <div className='col-sm-8 offset-sm-2'>
+      <Accordion expanded={expanded === 'panel1'} onChange={handleChange("panel1")}>
         <AccordionSummary id="panel1d-header" className='d-flex'>
           <Typography className='flex-grow-1'>Import References</Typography>
           <div className='d-flex'>
@@ -67,17 +68,20 @@ export default function CustomizedAccordions() {
           </div>
 
         </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
+        <AccordionDetails sx={{ padding: 1 }}>
+          <div className='border-bottom mb-1'>
+            import History
+          </div>
+          <div className='d-flex justify-content-between mb-1 border-bottom'>
+            <div> date</div>
+            <div>n studies added to title and abstract screening</div>
+            <div>no duplicate found</div>
+          </div>
+          <div>view details</div>
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
+        <AccordionSummary id="panel2d-header">
           <Typography>Collapsible Group Item #2</Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -102,6 +106,6 @@ export default function CustomizedAccordions() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-    </div>
+    </div >
   );
 }
