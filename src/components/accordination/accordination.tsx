@@ -55,8 +55,17 @@ export default function CustomizedAccordions() {
   return (
     <div>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>Collapsible Group Item #1</Typography>
+        <AccordionSummary id="panel1d-header" className='d-flex'>
+          <Typography className='flex-grow-1'>Import References</Typography>
+          <div className='d-flex'>
+            <div className='mx-4'>
+              0 total duplicate remove
+            </div>
+            <div>
+              import
+            </div>
+          </div>
+
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
