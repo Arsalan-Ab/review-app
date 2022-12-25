@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { colors } from "../../value/colors/colors";
-import Review from "../reviews/review";
+import Review from "components/reviews/review";
 
 function AddShowReview() {
 

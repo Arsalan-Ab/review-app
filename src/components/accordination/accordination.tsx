@@ -8,6 +8,9 @@ import MuiAccordionSummary, {
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { SyntheticEvent, useState } from 'react';
+import MultiProgress from 'react-multi-progress'
+import { colors, progressColor } from 'value/colors/colors';
+import VoteStatusGenerator from './vote-status-generator';
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -57,14 +60,12 @@ export default function CustomizedAccordions() {
     <div className='col-sm-8 offset-sm-2'>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange("panel1")}>
         <AccordionSummary id="panel1d-header" className='d-flex'>
-          <Typography className='flex-grow-1'>Import References</Typography>
-          <div className='d-flex'>
-            <div className='mx-4'>
-              0 total duplicate remove
-            </div>
-            <div>
-              import
-            </div>
+          <Typography className='w-50'>Import References</Typography>
+          <div className='flex-grow-1'>
+            0 total duplicate remove
+          </div>
+          <div>
+            import
           </div>
 
         </AccordionSummary>
@@ -81,16 +82,49 @@ export default function CustomizedAccordions() {
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-        <AccordionSummary id="panel2d-header">
-          <Typography>Collapsible Group Item #2</Typography>
+        <AccordionSummary id="panel2d-header" className='d-flex'>
+          <Typography className='w-50'>Title and Abstract Screning</Typography>
+
+          <div className='flex-grow-1'>
+            0 irrelevnt
+          </div>
+          <div>
+            n studies to screen
+          </div>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
+          <div className='d-flex w-100'>
+            <div className='w-50'>
+              <div className='fs-6 mb-1'>TEAM PROGRESS</div>
+              <div className='mb-2'>
+                <MultiProgress backgroundColor={progressColor.noVote} height={15} elements={
+                  [{
+                    value: 25,
+                    color: progressColor.oneVote
+                  }]
+                } />
+              </div>
+              <div className='container'>
+                <div className='row'>
+                  <div className='col-7'>
+                    {VoteStatusGenerator("DONE", progressColor.done, 2)}
+                  </div>
+                  <div className='col-5'>
+                    {VoteStatusGenerator("CONFLICT", progressColor.conflict, 0)}
+                  </div>
+                </div>
+
+                <div className='row'>
+                  <div className='col-7'>
+                    <div>{VoteStatusGenerator("ONE VOTE", progressColor.oneVote, 2)}</div>
+                  </div>
+                  <div className='col-5'>
+                    <div>{VoteStatusGenerator("NO VOTE", progressColor.noVote, 0)}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>

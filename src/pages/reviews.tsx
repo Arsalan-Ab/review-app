@@ -1,5 +1,6 @@
-import AddShowReview from "../components/add-show-review/add-show-review";
-import ReviewSecondryNavigation from "../components/secondry-navigation/review-secondry-navigation";
+import AddShowReview from "components/add-show-review/add-show-review";
+import ReviewSecondryNavigation from "components/secondry-navigation/review-secondry-navigation";
+
 
 function Reviews() {
     return (

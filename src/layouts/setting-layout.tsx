@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import SettingSecondryNavigation from "../components/secondry-navigation/setting-secondry-navigation";
+import SettingSecondryNavigation from "components/secondry-navigation/setting-secondry-navigation";
 
 function SettingLayout() {
 
@@ -13,7 +13,7 @@ function SettingLayout() {
                     <SettingSecondryNavigation />
                 </div>
             </div>
-            <Outlet/>
+            <Outlet />
         </>
 
     );

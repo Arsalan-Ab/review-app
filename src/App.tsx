@@ -1,8 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from "react-router-dom"
-import PrimaryNavigation from './components/primary-navigation/primary-navigation';
-import Globallayout from './layouts/global-layout';
+import Globallayout from 'layouts/global-layout';
 import Reviews from './pages/reviews';
 import { Fragment } from 'react';
 import Sign from './pages/sign';
