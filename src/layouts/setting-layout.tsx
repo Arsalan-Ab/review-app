@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import SettingSecondryNavigation from "components/secondry-navigation/setting-secondry-navigation";
+import SecondryNavigationMaker from "components/secondry-navigation-maker";
 
 function SettingLayout() {
 
@@ -10,7 +10,10 @@ function SettingLayout() {
                     <div className="row border-bottom border-4">
                         <h2 className="col-sm-10 offset-sm-2 fw-normal ">Setting</h2>
                     </div>
-                    <SettingSecondryNavigation />
+                    <SecondryNavigationMaker
+                        linksName={['review setting', 'reviewers', 'study tags']}
+                        linksAddress={['review-setting', 'authors', 'study-tags']}
+                    />
                 </div>
             </div>
             <Outlet />

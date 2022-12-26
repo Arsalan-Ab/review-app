@@ -6,7 +6,7 @@ function NewReviewForm() {
     return (
         <div className="container-sm">
             <div className="row">
-                <form className="col-sm-8 offset-2 my-4 bg-white p-3">
+                <form className="col-sm-8 offset-sm-2 my-4 bg-white py-3">
                     <div className="mb-3">
                         <label className="form-label">Name your review</label>
                         <input type="email" className="form-control shadow-none" />

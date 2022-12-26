@@ -2,6 +2,19 @@
   background-color: #F3EEC3;
 }
 
-a{
+a {
   color: black !important;
 }
+
+/* input[type="file"] {
+  display: none;
+}
+
+.custom-choose-file {
+  border: 1px solid rgb(0, 0, 0);
+  font-size: .9rem;
+  background:#eff4f0;
+  display: inline-block;
+  padding: 3px 6px;
+  cursor: pointer;
+} */

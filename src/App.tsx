@@ -9,6 +9,7 @@ import NewReview from './pages/new-review';
 import ReviewSummary from './pages/review-summary';
 import ReviewSetting from './pages/settings/review-setting';
 import SettingLayout from './layouts/setting-layout';
+import NewImport from 'pages/new-import';
 
 function App() {
   return (
@@ -20,18 +21,13 @@ function App() {
           <Route path='/reviews' element={<Reviews />}></Route>
           <Route path='/new-review' element={<NewReview />}></Route>
           <Route path='review-summary' element={<ReviewSummary />}></Route>
+          <Route path='new-import' element = {<NewImport/>}></Route>
           <Route element={<SettingLayout />}>
             <Route path='/setting' element={<ReviewSetting />}></Route>
           </Route>
         </Route>
 
       </Routes>
-
-
-      <Routes>
-
-      </Routes>
-
 
     </div>
   );

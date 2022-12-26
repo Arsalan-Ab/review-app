@@ -1,5 +1,5 @@
 import AddShowReview from "components/add-show-review/add-show-review";
-import ReviewSecondryNavigation from "components/secondry-navigation/review-secondry-navigation";
+import SecondryNavigationMaker from "components/secondry-navigation-maker";
 
 
 function Reviews() {
@@ -10,7 +10,10 @@ function Reviews() {
                     <div className="row border-bottom border-4">
                         <h2 className="col-sm-10 offset-sm-2 fw-normal ">your reviews</h2>
                     </div>
-                    <ReviewSecondryNavigation />
+                    <SecondryNavigationMaker
+                        linksName={['current reviews', 'archived reviews']}
+                        linksAddress={['reviews', 'archived']}
+                    />
                 </div>
             </div>
             <AddShowReview />
