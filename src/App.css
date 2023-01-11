@@ -1,20 +1,27 @@
 .main-background {
   background-color: #F3EEC3;
+  min-height: 100vh;
 }
 
 a {
   color: black !important;
+  font-size: calc(var(--bs-body-font-size) * 0.85) !important;
 }
 
-/* input[type="file"] {
+.custom-border {
+  border-bottom: 3px solid #EA7317;
+}
+
+input[type="file"] {
   display: none;
 }
 
 .custom-choose-file {
-  border: 1px solid rgb(0, 0, 0);
-  font-size: .9rem;
-  background:#eff4f0;
+  background-color: rgb(229, 226, 226);
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
   display: inline-block;
   padding: 3px 6px;
+  font-size: .8rem;
   cursor: pointer;
-} */
+}

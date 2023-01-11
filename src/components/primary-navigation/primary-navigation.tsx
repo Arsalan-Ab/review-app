@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { Box } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import IconButton from "@mui/material/IconButton";
@@ -6,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import NotificationsNoneSharpIcon from '@mui/icons-material/NotificationsNoneSharp';
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
-import { colors } from "../../value/colors/colors";
+import { colors } from "constants/colors";
 
 
 function PrimaryNavigation() {

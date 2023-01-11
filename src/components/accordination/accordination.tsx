@@ -9,7 +9,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { SyntheticEvent, useState } from 'react';
 import MultiProgress from 'react-multi-progress'
-import { colors, progressColor } from 'value/colors/colors';
+import { colors, progressColor } from "constants/colors";
 import VoteStatusGenerator from './vote-status-generator';
 
 const Accordion = styled((props: AccordionProps) => (
