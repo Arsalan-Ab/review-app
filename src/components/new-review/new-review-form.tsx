@@ -1,5 +1,5 @@
 import Button from "@mui/material/Button";
-import { colors } from "../../value/colors/colors";
+import { colors } from "constants/colors";
 
 function NewReviewForm() {
 

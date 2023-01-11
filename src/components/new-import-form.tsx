@@ -1,6 +1,17 @@
 import Button from "@mui/material/Button";
-import { colors } from "value/colors/colors";
+import { colors } from "constants/colors";
+import { useState } from "react"
 function NewImportForm() {
+    const [fileName, setFileName] = useState('')
+
+    const changeInputHandler = (e: React.BaseSyntheticEvent) => {
+        if (e.target.value !== '') {
+            setFileName(e.target.files[0].name)
+        }
+        else {
+            setFileName('')
+        }
+    }
     return (
         <div className="container-sm">
             <div className="row">
@@ -18,8 +29,12 @@ function NewImportForm() {
                         </select>
                     </div>
 
-                    <div className="mb-4" style={{maxWidth:200}}>
-                        <input className="form-control form-control-sm" id="formFileSm" type="file"/>
+                    <div className="mb-4" style={{ maxWidth: 200 }}>
+                        <label className="custom-choose-file">
+                            <input type="file" onChange={changeInputHandler} />
+                            Choose File
+                        </label>
+                        <div style={{ fontSize: "0.85rem" }}>{fileName}</div>
                     </div>
                     <Button variant="contained" sx={{
                         backgroundColor: colors.primary, fontSize: 12, ":hover": {
