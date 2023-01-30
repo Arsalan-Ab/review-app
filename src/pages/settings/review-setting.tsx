@@ -1,5 +1,9 @@
+import ReviewSettingForm from "components/review-setting-form";
+
 function ReviewSetting() {
-    return ( null );
+    return (
+        <ReviewSettingForm />
+    );
 }
 
 export default ReviewSetting;
