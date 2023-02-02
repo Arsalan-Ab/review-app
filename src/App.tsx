@@ -11,6 +11,8 @@ import SettingLayout from './layouts/setting-layout';
 import NewImport from 'pages/new-import';
 import ScreenReferences from 'pages/screen-references';
 import TitleScreningLayout from 'layouts/title-screening-layout';
+import Reviewers from 'pages/settings/reviewers';
+import CriteriaExclusion from 'pages/settings/criteria-exclusion';
 
 function App() {
   return (
@@ -27,7 +29,9 @@ function App() {
             <Route path='screen-references' element={<ScreenReferences />}/>            
           </Route>
           <Route element={<SettingLayout />}>
-            <Route path='/setting' element={<ReviewSetting />}></Route>
+            <Route path='/review-setting' element={<ReviewSetting />}></Route>
+            <Route path='/authors' element={<Reviewers/>}></Route>
+            <Route path='/criteria-exclusion' element={<CriteriaExclusion/>}></Route>
           </Route>
         </Route>
 

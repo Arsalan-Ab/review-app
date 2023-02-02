@@ -2,7 +2,11 @@ import ReviewSettingForm from "components/review-setting-form";
 
 function ReviewSetting() {
     return (
-        <ReviewSettingForm />
+        <div className="container-sm">
+            <div className="row">
+                <ReviewSettingForm />
+            </div>
+        </div>
     );
 }
 

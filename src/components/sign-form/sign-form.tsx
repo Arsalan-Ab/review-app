@@ -1,22 +1,36 @@
+import { Button, Paper, TextField } from "@mui/material";
+import { colors } from "constants/colors";
+
 function SignForm() {
 
 
     let signUp = true
     return (
-        <form className="border mb-5 bg-light d-flex flex-column p-2 mt-3 w-50">
-            <div>
-                {
-                    <h1>{signUp ? "SignUp" : "Login"}</h1>
-                }
-            </div>
+        <Paper className="mt-5 position-relative" elevation={3}>
+            <form className=" mb-5 px-5 py-3" style={{ width: 400 }}>
+                <div className="text-center mb-5">
+                    {
+                        <h2>{signUp ? "SignUp" : "Login"}</h2>
+                    }
+                </div>
 
-            <div className="mb-2">
-                <input className=" form-control mb-2" name="add" placeholder="username" ></input>
-                <input className="form-control" placeholder="password"></input>
+                <div className="mb-5">
+                    <label className="mb-1"><small>Username</small></label>
+                    <TextField className="mb-2" size="small" id="outlined-basic" variant="outlined" fullWidth />
+                    <label className="mb-1"><small>Password</small></label>
+                    <TextField size="small" id="outlined-basic" variant="outlined" type={"password"} fullWidth />
+                </div>
+                <div>
+                    <Button type="submit" variant="contained" size="small" fullWidth sx={{
+                        backgroundColor: colors.primary, fontSize: 12, ":hover": {
+                            bgcolor: colors.secondry
+                        }
+                    }}>register </Button>
+                </div>
 
-            </div>
-            <button className="btn btn-primary align-self-center" type='submit'>Submit</button>
-        </form>
+            </form>
+
+        </Paper>
     );
 }
 

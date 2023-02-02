@@ -1,7 +1,9 @@
 export const colors = {
     primary:"#463544",
     secondry:"#EA7317",
-    backGround:"#F3EEC3"
+    backGround:"#F3EEC3",
+    removecolor:"#dc3545",
+    lightBlue:"#47817F",
 }
 
 export const progressColor = {
