@@ -15,7 +15,7 @@ function SignForm() {
                 </div>
 
                 <div className="mb-5">
-                    <label className="mb-1"><small>Username</small></label>
+                    <label dir="rtl" className="mb-1"><small>Username</small></label>
                     <TextField className="mb-2" size="small" id="outlined-basic" variant="outlined" fullWidth />
                     <label className="mb-1"><small>Password</small></label>
                     <TextField size="small" id="outlined-basic" variant="outlined" type={"password"} fullWidth />
