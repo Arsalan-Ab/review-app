@@ -13,6 +13,8 @@ import ScreenReferences from 'pages/screen-references';
 import TitleScreningLayout from 'layouts/title-screening-layout';
 import Reviewers from 'pages/settings/reviewers';
 import CriteriaExclusion from 'pages/settings/criteria-exclusion';
+import ImportHistory from 'pages/import-history';
+import ImportPageLayout from 'layouts/import-page-layout';
 
 function App() {
   return (
@@ -24,14 +26,20 @@ function App() {
           <Route path='/reviews' element={<Reviews />}></Route>
           <Route path='/new-review' element={<NewReview />}></Route>
           <Route path='review-summary' element={<ReviewSummary />}></Route>
-          <Route path='new-import' element={<NewImport />}></Route>
-          <Route element={<TitleScreningLayout />}>
-            <Route path='screen-references' element={<ScreenReferences />}/>            
+
+          <Route element={<ImportPageLayout />}>
+            <Route path='new-import' element={<NewImport />}></Route>
+            <Route path='/import-history' element={<ImportHistory />}></Route>
           </Route>
+
+          <Route element={<TitleScreningLayout />}>
+            <Route path='screen-references' element={<ScreenReferences />} />
+          </Route>
+          
           <Route element={<SettingLayout />}>
             <Route path='/review-setting' element={<ReviewSetting />}></Route>
-            <Route path='/authors' element={<Reviewers/>}></Route>
-            <Route path='/criteria-exclusion' element={<CriteriaExclusion/>}></Route>
+            <Route path='/authors' element={<Reviewers />}></Route>
+            <Route path='/criteria-exclusion' element={<CriteriaExclusion />}></Route>
           </Route>
         </Route>
 

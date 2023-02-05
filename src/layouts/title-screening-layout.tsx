@@ -4,7 +4,6 @@ import { Outlet } from "react-router-dom";
 function TitleScreningLayout() {
     return (
         <>
-
             <div className=" bg-white mb-5 ">
                 <div className="container text-uppercase ">
                     <div className="row border-bottom border-4">

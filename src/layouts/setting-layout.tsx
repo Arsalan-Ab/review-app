@@ -11,8 +11,8 @@ function SettingLayout() {
                         <h2 className="col-sm-10 offset-sm-2 fw-normal ">Setting</h2>
                     </div>
                     <SecondryNavigationMaker
-                        linksName={['review setting', 'reviewers', 'Criteria & exclusion reasons', 'study tags']}
-                        linksAddress={['review-setting', 'authors', 'criteria-exclusion', 'study-tags']}
+                        linksName={['review setting','team setting', 'reviewers', 'Criteria & exclusion reasons', 'study tags']}
+                        linksAddress={['review-setting', 'authors', 'team-setting','criteria-exclusion', 'study-tags']}
                     />
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import CriteriaExclusionForm from "layouts/criteria-exclusion-form";
+import CriteriaExclusionForm from "components/criteria-exclusion-form";
 
 function CriteriaExclusion() {
     return ( 
