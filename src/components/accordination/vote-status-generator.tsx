@@ -1,5 +1,4 @@
 import FiberManualRecordOutlinedIcon from '@mui/icons-material/FiberManualRecordOutlined';
-import { Icon, IconButton } from '@mui/material';
 
 function VoteStatusGenerator(title: string, color: string, count: number,) {
 
@@ -9,7 +8,6 @@ function VoteStatusGenerator(title: string, color: string, count: number,) {
                 <div className='me-1'>{count}</div>
                 <FiberManualRecordOutlinedIcon sx={{ color: color }} className='me-1' fontSize='small' />
                 <div>{title}</div>
-
             </div>
         </>
     );

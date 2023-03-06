@@ -10,4 +10,3 @@ export function signup(data: signupData) {
         console.log(response.data);
     })
 }
-

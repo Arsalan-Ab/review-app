@@ -15,6 +15,7 @@ import Reviewers from 'pages/settings/reviewers';
 import CriteriaExclusion from 'pages/settings/criteria-exclusion';
 import ImportHistory from 'pages/import-history';
 import ImportPageLayout from 'layouts/import-page-layout';
+import TeamSetting from 'pages/settings/team-setting';
 
 function App() {
   return (
@@ -35,10 +36,11 @@ function App() {
           <Route element={<TitleScreningLayout />}>
             <Route path='screen-references' element={<ScreenReferences />} />
           </Route>
-          
+
           <Route element={<SettingLayout />}>
             <Route path='/review-setting' element={<ReviewSetting />}></Route>
             <Route path='/authors' element={<Reviewers />}></Route>
+            <Route path='/team-setting' element={<TeamSetting />}></Route>
             <Route path='/criteria-exclusion' element={<CriteriaExclusion />}></Route>
           </Route>
         </Route>
